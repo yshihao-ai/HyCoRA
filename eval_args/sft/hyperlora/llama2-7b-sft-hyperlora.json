@@ -1,0 +1,29 @@
+{
+    "output_dir": "output/evaluate/firefly-llama2-7b-sft-hyperlora-general-checkpoint-last",
+    "model_name_or_path": "/mnt/liunayu/pretrained_models/meta-llama/Llama-2-7b-hf/",
+    "adapter_name_or_path": "output/llama2-7b-sft-hyperlora",
+    "dataset_path": "./data/role_bench_en_general_test.json",
+    "role_desc_file": "./data/roles_desc_en.json",
+    "train_mode": "hyperlora",
+    "language": "en",
+    "batch_size": 6,
+    
+    "max_new_tokens": 512,
+    "do_sample": true,
+    "top_p": 0.9,
+    "top_k": 40,
+    "temperature": 0.7,
+    "repetition_penalty": 1.0,
+
+    "roles_num": 95,
+    "roles_emb_dim": 128,
+    "layers_num": 224,
+    "layers_emb_dim": 64,
+    "residual_blocks_num": 2,
+    "hyper_hidden_dim": 256,
+    "rank_dim": 8,
+    "alpha": 32,
+    "layernorm_input": true,
+    "layernorm_output": true,
+    "dropout": 0.0
+}

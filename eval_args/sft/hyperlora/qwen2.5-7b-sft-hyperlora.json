@@ -1,0 +1,27 @@
+{
+    "output_dir": "output/evaluate/qwen2.5-7b-sft-hyperlora-general-checkpoint-26000",
+    "model_name_or_path": "/mnt/yangshihao/pretrained_models/qwen2.5-7b",
+    "adapter_name_or_path": "output/qwen2.5-7b-sft-hyperlora/checkpoint-26000",
+    "dataset_path": "./data/role_bench_zh_role_specific_test.json",
+    "role_desc_file": "./data/roles_desc_zh.json",
+    "train_mode": "hyperlora",
+    "language": "zh",
+    
+    "max_new_tokens": 100,
+    "do_sample": true,
+    "top_p": 0.7,
+    "temperature": 0.95,
+    "repetition_penalty": 1.0,
+
+    "roles_num": 5,
+    "roles_emb_dim": 128,
+    "layers_num": 196,
+    "layers_emb_dim": 128,
+    "residual_blocks_num": 2,
+    "hyper_hidden_dim": 512,
+    "rank_dim": 8,
+    "alpha": 32,
+    "layernorm_input": true,
+    "layernorm_output": true,
+    "dropout": 0.0
+}

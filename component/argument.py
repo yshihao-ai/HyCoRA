@@ -1,0 +1,38 @@
+from dataclasses import dataclass, field
+from typing import Optional, Union, List
+
+
+@dataclass
+class CustomizedArguments:
+    max_seq_length: int = field(metadata={"help": "maximum input length"})
+    train_file: str = field(metadata={"help": "train dataset"})
+    model_name_or_path: str = field(metadata={"help": "path to the pretrained weights"})
+    template_name: str = field(default="", metadata={"help": "template"})
+    eval_file: Optional[str] = field(default="", metadata={"help": "eval file"})
+    max_prompt_length: int = field(default=512, metadata={"help": "max prompt length"})
+    beta: float = field(default=0.1, metadata={"help": "The beta factor in DPO loss"})
+    tokenize_num_workers: int = field(default=10, metadata={"help": "the number of tokenization threads during pretraining"})
+    task_type: str = field(default="sft", metadata={"help": "training tasks: [pretraining, SFT]"})
+    train_mode: str = field(default="lora", metadata={"help": "training methods: [full, QLoRA, LoRA, HyperLoRA]"})
+    lora_rank: Optional[int] = field(default=8, metadata={"help": "lora rank"})
+    lora_alpha: Optional[int] = field(default=32, metadata={"help": "lora alpha"})
+    lora_dropout: Optional[float] = field(default=0.00, metadata={"help": "lora dropout"})
+    target_modules: Optional[Union[List[str], str]] = field(default="all", metadata={"help": "lora target_modules"})
+    disable_gradient_checkpointing: Optional[bool] = field(default=False, metadata={"help": "whether or not to disable gradient checkpointing."})
+    use_unsloth: Optional[bool] = field(default=False, metadata={"help": "use unsloth or not"})
+    upcast_layernorm: Optional[bool] = field(default=False, metadata={"help": "whether or not to upcast the layernorm weights in fp32."})
+    upcast_lmhead_output: Optional[bool] = field(default=False, metadata={"help": "whether or not to upcast the output of lm_head in fp32."})
+    use_unsloth_gc: Optional[bool] = field(default=False, metadata={"help": "whether or not to use unsloth's gradient checkpointing (no need to install unsloth)."})
+    use_reentrant_gc: Optional[bool] = field(default=False, metadata={"help": "whether or not to use reentrant gradient checkpointing."})
+    role_desc_file: str = field(default="",metadata={"help": "role descriptions"})
+    roles_num: int = field(default=5, metadata={"help": "number of roles"})
+    roles_emb_dim: int = field(default=128, metadata={"help": "role embedding dimension"})
+    layers_num: int = field(default=28 * 4,  metadata={"help": "number of linear layers"})
+    layers_emb_dim: int = field(default=128, metadata={"help": "layer embedding dimension"})
+    residual_blocks_num: int = field(default=2, metadata={"help": "the number of residual blocks in the hyper-network"})
+    hyper_hidden_dim: int = field(default=512, metadata={"help": "the hidden layer dimension of the hypernetwork"})
+    rank_dim: int = field(default=8, metadata={"help": "the rank of HyperLoRA"})
+    alpha: int = field(default=32, metadata={"help": "the scaling factor (α) of LoRA"})
+    layernorm_input: bool = field(default=True, metadata={"help": "whether to apply layer normalization to the hyper-network input"})
+    layernorm_output: bool = field(default=True, metadata={"help": "Whether to apply layer normalization to the hyper-network output"})
+    dropout: float = field(default=0.0, metadata={"help": "Whether to apply dropout in the hyper-network"})
