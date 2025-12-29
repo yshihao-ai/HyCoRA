@@ -1,8 +1,6 @@
 
 # HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing
-![sitetracker](https://visitor-badge.laobi.io/badge?page_id=yshihao-ai.HyCoRA)
 <div align="center">
-
 [![Paper](https://img.shields.io/badge/Paper-Arxiv_2511.08017-red)](https://arxiv.org/abs/2511.08017)
 [![Code](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/yshihao-ai/HyCoRA)
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
@@ -25,14 +23,15 @@ Multi-character role-playing (MCRP) aims to equip large language models with the
 
 In this paper, we propose **HyCoRA** (**Hy**per-**Co**ntrastive **R**ole-**A**daptive learning), a novel framework that balances the learning of distinct and shared traits (Figure 1c).
 
-![Motivation](assets/motivation.jpg)
+<img src="./assets/motivation.jpg" alt="Motivation" width="50%" />
+
 <p align="center"><em>Figure 1: Comparison of different role-playing adaptation strategies.</em></p>
 
 ## 🚀 Methodology
 
 To capture both unique and shared behaviors, HyCoRA introduces a **Hyper-Half LoRA** structure and a **Hyper-Contrastive Learning** mechanism.
 
-![Framework](assets/framework.jpg)
+![Framework](./assets/framework.jpg)
 <p align="center"><em>Figure 2: The overall framework of HyCoRA.</em></p>
 
 ### Key Components:
@@ -69,13 +68,12 @@ pip install -r requirements.txt
 * `bitsandbytes==0.39.0`
 * `trl==0.7.11`
 
-
 ## 📂 Project Structure
 
 ```text
 HyCoRA/
 ├── component/             # Core components and utilities
-├── data/                  # Dataset path
+├── data.zip/              # Dataset path
 ├── eval_args/             # Configuration JSONs for evaluation
 ├── hyper_model/           # Model definitions (ChatGLM2, Qwen2, LLaMA, HyperNetwork)
 │   ├── glm2_hypernetwork/
@@ -86,6 +84,19 @@ HyCoRA/
 ├── train_args/            # Configuration JSONs for training
 ├── train.py               # Main training entry point
 └── requirements.txt       # Dependencies
+```
+
+## 📂 Dataset Preparation
+
+Since the dataset is compressed to ensure efficient transfer, please unzip `data.zip` to the project root directory before running any scripts.
+
+```bash
+# Option 1: Using unzip (Linux/Mac)
+unzip data.zip
+
+# Option 2: Using Python (Windows/Universal)
+# If you don't have 'unzip' installed, run this Python one-liner:
+python -c "import zipfile; zipfile.ZipFile('data.zip').extractall('.')"
 ```
 
 ## ⚡ Quick Start
@@ -113,12 +124,14 @@ CUDA_VISIBLE_DEVICES=0 python script/evaluate/evaluate.py \
 If you find our work helpful, please consider citing:
 
 ```bibtex
-@article{yang2025hycora,
-  title={HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing},
-  author={Yang, Shihao and Lu, Zhicong and Yang, Yong and Lv, Bo and Shen, Yang and Liu, Nayu},
-  journal={arXiv preprint arXiv:2511.08017},
-  year={2025},
-  url={[https://arxiv.org/abs/2511.08017](https://arxiv.org/abs/2511.08017)}
+@misc{yang2025hycorahypercontrastiveroleadaptivelearning,
+      title={HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing}, 
+      author={Shihao Yang and Zhicong Lu and Yong Yang and Bo Lv and Yang Shen and Nayu Liu},
+      year={2025},
+      eprint={2511.08017},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.08017}, 
 }
 ```
 
@@ -130,5 +143,5 @@ We would like to express our gratitude to the following open-source projects for
 * **[Firefly](https://github.com/yangjianxin1/Firefly)**: For the robust large model fine-tuning framework.
 * **[Hyper-Adapter (Fairseq)](https://github.com/cbaziotis/fairseq/tree/hyperadapters/examples/adapters)**: For the reference implementation of hyper-networks.
 
-![sitetracker](https://visitor-badge.laobi.io/badge?page_id=yshihao-ai.HyCoRA)
+
 
