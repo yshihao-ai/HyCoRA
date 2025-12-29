@@ -1,6 +1,6 @@
 
 # HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing
-<div align="center">
+
 [![Paper](https://img.shields.io/badge/Paper-Arxiv_2511.08017-red)](https://arxiv.org/abs/2511.08017)
 [![Code](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/yshihao-ai/HyCoRA)
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
@@ -23,7 +23,9 @@ Multi-character role-playing (MCRP) aims to equip large language models with the
 
 In this paper, we propose **HyCoRA** (**Hy**per-**Co**ntrastive **R**ole-**A**daptive learning), a novel framework that balances the learning of distinct and shared traits (Figure 1c).
 
-<img src="./assets/motivation.jpg" alt="Motivation" width="50%" />
+<div style="text-align: center;">
+    <img src="./assets/motivation.jpg" alt="Motivation" width="50%" />
+</div>
 
 <p align="center"><em>Figure 1: Comparison of different role-playing adaptation strategies.</em></p>
 
