@@ -1,7 +1,7 @@
 
 # HyCoRA: Hyper-Contrastive Role-Adaptive Learning for Role-Playing
 
-[![Paper](https://img.shields.io/badge/Paper-Arxiv_2511.08017-red)](https://arxiv.org/abs/2511.08017)
+[![Paper](https://img.shields.io/badge/Paper-AAAI_2026-red)](https://arxiv.org/abs/2511.08017)
 [![Code](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/yshihao-ai/HyCoRA)
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-orange)]()
