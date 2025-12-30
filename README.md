@@ -5,6 +5,7 @@
 [![Code](https://img.shields.io/badge/Code-GitHub-black)](https://github.com/yshihao-ai/HyCoRA)
 [![Python](https://img.shields.io/badge/Python-3.9-blue)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-orange)]()
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https://github.com/yshihao-ai/HyCoRA&label=VISITORS&labelColor=%23555555&countColor=%23f3722c&style=flat)
 
 **Shihao Yang**<sup>1*</sup>, **Zhicong Lu**<sup>2*</sup>, **Yong Yang**<sup>1*</sup>, **Bo Lv**<sup>2</sup>, **Yang Shen**<sup>1</sup>, **Nayu Liu**<sup>1†</sup>
 
